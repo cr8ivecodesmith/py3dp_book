@@ -1,0 +1,73 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+.cache/
+
+# Distribution / packaging
+.Python
+env/
+bin/
+build/
+develop-eggs/
+dist/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+.python-version
+
+# Assets
+.assets/
+.webassets-cache/
+
+# Installed packages (bower)
+bower_components
+
+# Development directories
+data/
+
+# Mac junk!
+.DS_Store
+
+# Local settings
+/settings.py
+
+# Scratch Files
+foo.*
+
+# Node Stahp plz
+/node_modules
+
+# Coverage
+.coverage
+htmlcov/
+
+
+# JetBrains (PyCharm) config
+.idea/*
+docker_crash_logs
+issues
+*.sublime-*
+*.xlsx
+deploy/ssl_certs
+deploy/ssl_certs2
+deploy/ssl_certs3
+deploy/kubernetes/secrets
+
+# Temp files
+*.*~
+*.swp
+*.swp~
+*.pid
+*.log
+
+# pytest cache
+.pytest_cache/*
+
+# OpenSCAD files (Re-generate from python script)
+*.scad
