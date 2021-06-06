@@ -143,6 +143,12 @@ def triangle(point1, point2, point3, height):
 
 
 def regular_polygon(sides, radius, height):
+    """Regular polygons have equal sides and interior angles
+
+    ::NOTES::
+    Radius starts from origin.
+
+    """
     global _cmds
     _cmds = "}\n\n" + _cmds
     for wedge in range(sides):
