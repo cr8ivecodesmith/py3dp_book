@@ -21,6 +21,7 @@ from solid import (
 )
 
 
+PROJ_DIR = Path(__file__).parent.parent.absolute()  # relative to this module
 FRAGMENTS = 32  # Default
 TINY = 1e-10  # Flat-ish height
 CONVEXITY = 20

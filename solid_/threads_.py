@@ -1,5 +1,3 @@
-from pathlib import Path
-
 from solid import (
     import_scad,
     cylinder,
@@ -9,10 +7,12 @@ from solid import (
 )
 from solid.utils import right
 
-from utils import render_to_openscad, regular_polygon
+from utils import (
+    PROJ_DIR,
+    regular_polygon,
+    render_to_openscad,
+)
 
-
-PROJ_DIR = Path(__file__).parent.parent.absolute()
 
 # Import OpenScad module
 # NOTE: There's a built solid.screw_thread in SolidPython module
@@ -29,7 +29,7 @@ def main():
     screw_solid = translate((0, 0, -12))(screw_solid)
 
     # Head
-    screw_head = regular_polygon(6, 8, 4)
+    screw_head = regular_polygon(sides=6, radius=8, height=4)
     screw_head = translate((0, 0, -16))(screw_head)
 
     # Create the screw
