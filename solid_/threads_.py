@@ -1,11 +1,12 @@
 from solid import (
     import_scad,
+    part,
     cylinder,
     translate,
     color,
     mirror,
 )
-from solid.utils import right
+from solid.utils import right, up
 
 from utils import (
     PROJ_DIR,
@@ -20,7 +21,7 @@ from utils import (
 threads = import_scad(PROJ_DIR.joinpath('threads.scad').as_posix())
 
 
-def main():
+def right_hand_screw():
     # Threaded part
     screw_threads = threads.metric_thread(diameter=8, pitch=1, length=12)
 
@@ -34,18 +35,28 @@ def main():
 
     # Create the screw
     screw = screw_threads + screw_solid + screw_head
-    screw = color('silver')(screw)
 
-    # Move up and away from origin
-    screw = translate((10, 0, 16))(screw)
-
-    # Mirror in the Y-Z plane
-    screw = mirror((1, 0, 0))(screw)
-
-    # Move back to origin
-    screw = right(10)(screw)
+    screw = up(16)(screw)
 
     return screw
+
+
+def main():
+    screws = part()
+
+    right_screw = right_hand_screw()
+    right_screw = color('gold')(right_screw)
+    right_screw = right(10)(right_screw)
+    screws.add(right_screw)
+
+    # The left-hand screw is just a mirrored version
+    left_screw = right_hand_screw()
+    left_screw = color('silver')(left_screw)
+    left_screw = right(10)(left_screw)
+    left_screw = mirror((1, 0, 0))(left_screw)
+    screws.add(left_screw)
+
+    return screws
 
 
 if __name__ == '__main__':
