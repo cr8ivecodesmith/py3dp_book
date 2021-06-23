@@ -26,19 +26,23 @@ Following along the examples from the book
   finishing the Instructible as well.
 
 
-**Other notes**
+**Following along the code samples**
 
-- I'm using the Kindle version of the book. and unfortunately the code samples
+- I'm using the Kindle version of the book and unfortunately the code samples
   are in image form so you'll really have to type stuff in yourself. I find
   that this may be a good thing for learning.
+- The author have created a lot of convenience objects that builts on top
+  of the basic OpenScad objects (i.e. triangle, regular_polygon, etc.). I've
+  translated some of them to SolidPython.
+
+
+**External resources**
+
 - One annoying thing is that the author will leave you to search the internet
   for the libraries he uses (both his custom translation lib and the the
   OpenScad libs). I was able to find these and am including them in this repo
   for reference. I wish he would've uploaded the libs on github or somewhere
   easily accessible like any decent tech author would do.
-- The author have created a lot of convenience objects that builts on top
-  of the basic OpenScad objects (i.e. triangle, regular_polygon, etc.). I've
-  translated some of them to SolidPython.
 
 
 ### Links
