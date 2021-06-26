@@ -34,6 +34,10 @@ Following along the examples from the book
 - The author have created a lot of convenience objects that builts on top
   of the basic OpenScad objects (i.e. triangle, regular_polygon, etc.). I've
   translated some of them to SolidPython.
+- The author likes to put a lot of the normal OpenScad function under a
+  `linear_extrude` function and this tripped me off as I was translating
+  to SolidPython. If the examples are not the same as what you are producing,
+  check the author's "reimplementation" in his library.
 
 
 **External resources**
